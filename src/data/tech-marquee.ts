@@ -1,0 +1,16 @@
+export const techMarquee = [
+  "React",
+  "Next.js",
+  "TypeScript",
+  "Laravel",
+  "Livewire",
+  "React Native",
+  "Expo",
+  "Python",
+  "FastAPI",
+  "Tailwind CSS",
+  "Node.js",
+  "PostgreSQL",
+  "Docker",
+  "MikroTik",
+] as const

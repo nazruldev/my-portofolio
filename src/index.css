@@ -120,13 +120,6 @@
       radial-gradient(ellipse 60% 40% at 0% 100%, color-mix(in oklab, var(--secondary) 8%, transparent), transparent);
   }
 
-  .reveal {
-    @apply translate-y-6 opacity-0 transition-[opacity,transform] duration-500 ease-out;
-  }
-  .reveal.visible {
-    @apply translate-y-0 opacity-100;
-  }
-
   .hero-profile-fade-in {
     animation: hero-profile-fade-in 0.6s ease-out both;
   }
@@ -157,7 +150,6 @@
     opacity: 1 !important;
   }
 
-  .reveal,
   .transition-\[opacity\,transform\] {
     transition: none !important;
     opacity: 1 !important;

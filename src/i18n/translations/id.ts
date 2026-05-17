@@ -12,16 +12,9 @@ export const id: PortfolioTranslations = {
       "Proyek dan pengalaman di React, Next.js, Laravel, aplikasi mobile, dan solusi web siap produksi. Berbasis di Indonesia.",
   },
   site: {
-    heroGreeting: "Selamat datang di nazrul.dev",
     title: "Full Stack Web Developer",
     tagline:
       "Membangun website dan aplikasi web modern — dari frontend interaktif hingga backend, database, dan deployment yang siap produksi.",
-    typewriterWords: [
-      "Pengembangan Frontend",
-      "React Native & Expo",
-      "Python & REST API",
-      "Laravel & Next.js",
-    ],
     statLabels: {
       yearsExperience: "Tahun Pengalaman",
       successfulProjects: "Proyek Sukses",
@@ -31,17 +24,14 @@ export const id: PortfolioTranslations = {
   ui: {
     skipToContent: "Lewati ke konten utama",
     viewProjects: "Lihat Proyek Saya",
-    learnMore: "Tentang Saya",
     resume: "Unduh CV",
     getInTouch: "Hubungi Saya",
     sendEmail: "Kirim Email",
     close: "Tutup",
     visitSite: "Kunjungi situs",
-    viewProduct: "Lihat produk",
     reachOut: "Hubungi saya kapan saja di:",
     contactIntro:
       "Ada proyek atau ingin berkolaborasi? Saya senang mendengar dari Anda.",
-    footerAbout: "Tentang",
     footerContact: "Kontak",
     footerConnect: "Terhubung",
     footerEmail: "Email",
@@ -71,7 +61,6 @@ export const id: PortfolioTranslations = {
   skillsIntro: {
     sectionLabel: "02. Keahlian",
     title: "Keahlian Teknis",
-    subtitle: "Daftar keahlian saya",
     description:
       "Sejak 2016 saya membangun skill set yang luas di web development, mobile, dan backend — beradaptasi seiring perkembangan teknologi.",
   },
@@ -176,8 +165,6 @@ export const id: PortfolioTranslations = {
   experienceIntro: {
     sectionLabel: "05. Pengalaman",
     title: "Pengalaman Proyek",
-    description:
-      "Pengalaman proyek sebagai Frontend dan Full Stack Developer untuk klien korporat, kampus, dan platform freelancing sejak 2014.",
   },
   experiences: [
     {

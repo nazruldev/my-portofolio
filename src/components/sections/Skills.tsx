@@ -1,4 +1,4 @@
-import { usePortfolio } from "@/data/portfolio"
+import { usePortfolio } from "@/i18n"
 import { Reveal } from "@/components/shared/Reveal"
 import { SkillCategoryCard } from "@/components/skills/SkillCategoryCard"
 import { SectionHeading } from "@/components/shared/SectionHeading"

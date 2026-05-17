@@ -1,5 +1,5 @@
 import { ArrowRight, FileDown, Mail, MapPin } from "lucide-react"
-import { usePortfolio } from "@/data/portfolio"
+import { usePortfolio } from "@/i18n"
 import { publicAssets } from "@/lib/public-assets"
 import { sectionStyles } from "@/lib/section-styles"
 import { cn } from "@/lib/utils"

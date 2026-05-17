@@ -1,4 +1,4 @@
-import { usePortfolio } from "@/data/portfolio"
+import { usePortfolio } from "@/i18n"
 import { Marquee } from "@/components/ui/marquee"
 import { cn } from "@/lib/utils"
 

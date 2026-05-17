@@ -1,4 +1,4 @@
-import type { SkillGroup } from "@/data/portfolio"
+import type { SkillGroup } from "@/data/portfolio.types"
 import { skillGroupIcon } from "@/lib/skill-group-icons"
 import { sectionStyles } from "@/lib/section-styles"
 import { cn } from "@/lib/utils"

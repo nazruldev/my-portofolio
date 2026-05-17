@@ -1,6 +1,5 @@
-import { useState } from "react"
 import { Mail } from "lucide-react"
-import { usePortfolio } from "@/data/portfolio"
+import { usePortfolio } from "@/i18n"
 import { getContactChannels } from "@/lib/social-channels"
 import { Button } from "@/components/ui/button"
 import {
@@ -77,7 +76,3 @@ export function ContactDialog({ open, onOpenChange }: ContactDialogProps) {
   )
 }
 
-export function useContactDialog() {
-  const [open, setOpen] = useState(false)
-  return { open, setOpen }
-}

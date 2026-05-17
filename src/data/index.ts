@@ -1,0 +1,5 @@
+export { siteBase } from "@/data/site"
+export { techMarquee } from "@/data/tech-marquee"
+export { skillGroupsData } from "@/data/skills.data"
+export { projectsData } from "@/data/projects.data"
+export { certificatesData } from "@/data/certificates.data"

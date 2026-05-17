@@ -1,4 +1,5 @@
-import { usePortfolio } from "@/data/portfolio"
+import { usePortfolio } from "@/i18n"
+import { SiteMonogram } from "@/components/shared/SiteMonogram"
 import { getSocialChannels } from "@/lib/social-channels"
 import { sectionStyles } from "@/lib/section-styles"
 import { cn } from "@/lib/utils"
@@ -13,10 +14,8 @@ export function Footer() {
       <div className={cn(sectionStyles.container, "py-14 md:py-16")}>
         <div className="grid gap-10 md:grid-cols-12 md:gap-8">
           <div className="md:col-span-5">
-            <p className="font-mono text-lg font-semibold text-foreground">
-              <span className="text-primary">&lt;</span>
-              {site.name}
-              <span className="text-primary">/&gt;</span>
+            <p className="text-lg">
+              <SiteMonogram name={site.name} />
             </p>
             <p className="mt-2 text-sm text-muted-foreground">{site.title}</p>
             <p className="mt-1 text-sm text-muted-foreground">📍 {site.location}</p>

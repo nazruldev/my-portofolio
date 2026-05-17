@@ -70,14 +70,12 @@ export type PortfolioContent = {
   site: {
     name: string
     fullName: string
-    heroGreeting: string
     title: string
     tagline: string
     email: string
     location: string
     portfolioUrl: string
     resumeUrl: string
-    typewriterWords: string[]
     stats: { value: number; suffix: string; label: string }[]
     social: {
       github: string
@@ -91,16 +89,13 @@ export type PortfolioContent = {
   ui: {
     skipToContent: string
     viewProjects: string
-    learnMore: string
     resume: string
     getInTouch: string
     sendEmail: string
     close: string
     visitSite: string
-    viewProduct: string
     reachOut: string
     contactIntro: string
-    footerAbout: string
     footerContact: string
     footerConnect: string
     footerEmail: string
@@ -117,7 +112,6 @@ export type PortfolioContent = {
   skillsIntro: {
     sectionLabel: string
     title: string
-    subtitle: string
     description: string
   }
   skillGroups: SkillGroup[]
@@ -126,15 +120,11 @@ export type PortfolioContent = {
   projects: ProjectItem[]
   certificatesIntro: { sectionLabel: string; title: string }
   certificates: CertificateItem[]
-  experienceIntro: {
-    sectionLabel: string
-    title: string
-    description: string
-  }
+  experienceIntro: { sectionLabel: string; title: string }
   experiences: ExperienceItem[]
   educationIntro: { sectionLabel: string; title: string }
   education: EducationItem[]
-  techMarquee: string[]
+  techMarquee: readonly string[]
 }
 
 export type PortfolioTranslations = Omit<
@@ -142,10 +132,7 @@ export type PortfolioTranslations = Omit<
   "site" | "skillGroups" | "projects" | "certificates" | "techMarquee" | "seo"
 > & {
   seo: SeoContent
-  site: Pick<
-    PortfolioContent["site"],
-    "heroGreeting" | "title" | "tagline" | "typewriterWords"
-  > & {
+  site: Pick<PortfolioContent["site"], "title" | "tagline"> & {
     statLabels: {
       yearsExperience: string
       successfulProjects: string

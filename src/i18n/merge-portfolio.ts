@@ -5,7 +5,7 @@ import {
   siteBase,
   skillGroupsData,
   techMarquee,
-} from "@/data/portfolio.shared"
+} from "@/data"
 import { en } from "@/i18n/translations/en"
 import { id } from "@/i18n/translations/id"
 
@@ -20,10 +20,8 @@ export function buildPortfolio(locale: Locale): PortfolioContent {
     seo: t.seo,
     site: {
       ...siteBase,
-      heroGreeting: t.site.heroGreeting,
       title: t.site.title,
       tagline: t.site.tagline,
-      typewriterWords: t.site.typewriterWords,
       stats: siteBase.stats.map((stat, i) => ({
         value: stat.value,
         suffix: stat.suffix,

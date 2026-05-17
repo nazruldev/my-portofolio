@@ -1,0 +1,70 @@
+export const projectsData = [
+  {
+    id: "human-compass-constantine",
+    stack: "mobile" as const,
+    badges: ["React Native", "Expo", "Private"],
+    tech: ["React Native", "Expo", "Maps", "GPS"],
+  },
+  {
+    id: "oneclick-garudafood",
+    stack: "mobile" as const,
+    badges: ["React Native", "Expo", "Private"],
+    tech: ["React Native", "Expo", "REST API"],
+  },
+  {
+    id: "vdr-nusantara",
+    stack: "nextjs" as const,
+    badges: ["Next.js", "VDR", "Private"],
+    tech: ["Next.js", "React", "TypeScript"],
+  },
+  {
+    id: "jibi",
+    stack: "nextjs" as const,
+    badges: ["Next.js", "Private"],
+    tech: ["Next.js", "React", "TypeScript"],
+  },
+  {
+    id: "djp-ews",
+    stack: "nextjs" as const,
+    badges: ["Next.js", "Public"],
+    tech: ["Next.js", "Monitoring", "Dashboard"],
+  },
+  {
+    id: "djki",
+    stack: "nextjs" as const,
+    badges: ["Next.js", "POC", "AI"],
+    tech: ["Next.js", "Computer Vision", "AI"],
+  },
+  {
+    id: "sportirena",
+    stack: "nextjs" as const,
+    badges: ["Next.js", "Public"],
+    tech: ["Next.js", "Booking", "Search"],
+    url: "https://www.sportirena.com/",
+  },
+  {
+    id: "udbjm",
+    stack: "livewire" as const,
+    badges: ["Livewire", "Private"],
+    tech: ["Laravel", "Livewire", "MySQL"],
+  },
+  {
+    id: "sisfon",
+    stack: "laravel" as const,
+    badges: ["Laravel", "Public"],
+    tech: ["Laravel", "Documentation", "Multi-village"],
+  },
+  {
+    id: "agyman",
+    stack: "laravel" as const,
+    badges: ["Laravel", "Product"],
+    tech: ["Laravel", "PHP", "Admin"],
+    url: "https://projects.co.id/user/my_products/screenshots/d65b11/agyman-sistim-manajement-gym-responsive/",
+  },
+  {
+    id: "lavawail",
+    stack: "laravel" as const,
+    badges: ["Laravel", "Product"],
+    tech: ["Laravel", "PHP", "Downloader"],
+  },
+]

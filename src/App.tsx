@@ -2,16 +2,14 @@ import { lazy, Suspense } from "react"
 import { Hero } from "@/components/sections/Hero"
 import { Footer } from "@/components/sections/Footer"
 import { BackToTop } from "@/components/layout/BackToTop"
-import {
-  ContactDialog,
-  useContactDialog,
-} from "@/components/layout/ContactDialog"
+import { ContactDialog } from "@/components/layout/ContactDialog"
 import { Navbar } from "@/components/layout/Navbar"
 import { Preloader } from "@/components/layout/Preloader"
 import { ScrollProgress } from "@/components/layout/ScrollProgress"
 import { TechMarquee } from "@/components/shared/TechMarquee"
 import { SeoHead } from "@/components/seo/SeoHead"
-import { LocaleProvider, usePortfolio } from "@/data/portfolio"
+import { useContactDialog } from "@/hooks/use-contact-dialog"
+import { LocaleProvider, usePortfolio } from "@/i18n"
 
 const About = lazy(() =>
   import("@/components/sections/About").then((m) => ({ default: m.About }))

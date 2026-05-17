@@ -12,16 +12,9 @@ export const en: PortfolioTranslations = {
       "Projects and experience in React, Next.js, Laravel, mobile apps, and production-ready web solutions. Based in Indonesia.",
   },
   site: {
-    heroGreeting: "Welcome to nazrul.dev",
     title: "Full Stack Web Developer",
     tagline:
       "Building modern websites and web apps — from interactive frontends to backends, databases, and production-ready deployment.",
-    typewriterWords: [
-      "Frontend Development",
-      "React Native & Expo",
-      "Python & REST API",
-      "Laravel & Next.js",
-    ],
     statLabels: {
       yearsExperience: "Years Experience",
       successfulProjects: "Successful Projects",
@@ -31,17 +24,14 @@ export const en: PortfolioTranslations = {
   ui: {
     skipToContent: "Skip to main content",
     viewProjects: "View My Projects",
-    learnMore: "Learn More About Me",
     resume: "Resume",
     getInTouch: "Get In Touch",
     sendEmail: "Send Email",
     close: "Close",
     visitSite: "Visit site",
-    viewProduct: "View product",
     reachOut: "Reach out anytime at:",
     contactIntro:
       "Have a project in mind or want to collaborate? I'd love to hear from you.",
-    footerAbout: "About",
     footerContact: "Contact",
     footerConnect: "Connect",
     footerEmail: "Email",
@@ -71,7 +61,6 @@ export const en: PortfolioTranslations = {
   skillsIntro: {
     sectionLabel: "02. Skills",
     title: "Technical Skills",
-    subtitle: "My extensive list of skills",
     description:
       "Since 2016 I've built a broad skill set across web development, mobile, and backend — adapting as the stack evolves.",
   },
@@ -175,8 +164,6 @@ export const en: PortfolioTranslations = {
   experienceIntro: {
     sectionLabel: "05. Experience",
     title: "Project Experience",
-    description:
-      "Project work as a Frontend and Full Stack Developer for corporate clients, universities, and freelancing platforms since 2014.",
   },
   experiences: [
     {

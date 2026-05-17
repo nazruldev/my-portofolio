@@ -1,4 +1,4 @@
-import { usePortfolio } from "@/data/portfolio"
+import { usePortfolio } from "@/i18n"
 import { SectionHeading } from "@/components/shared/SectionHeading"
 import { SectionShell } from "@/components/shared/SectionShell"
 import { sectionStyles } from "@/lib/section-styles"

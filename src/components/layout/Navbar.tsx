@@ -1,11 +1,12 @@
 import { useState } from "react"
-import { Languages, Menu, Moon, Sun } from "lucide-react"
-import { useLocale, usePortfolio } from "@/data/portfolio"
-import { useTheme } from "@/hooks/use-theme"
+import { Languages, Menu } from "lucide-react"
+import { useLocale, usePortfolio } from "@/i18n"
 import { sectionStyles } from "@/lib/section-styles"
 import { cn } from "@/lib/utils"
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text"
 import { Button } from "@/components/ui/button"
+import { SiteMonogram } from "@/components/shared/SiteMonogram"
+import { ThemeToggle } from "@/components/layout/ThemeToggle"
 import {
   Sheet,
   SheetContent,
@@ -34,7 +35,6 @@ function LanguageToggle({ className }: { className?: string }) {
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
-  const { theme, toggle } = useTheme()
   const { site, navLinks, ui } = usePortfolio()
 
   return (
@@ -45,18 +45,18 @@ export function Navbar() {
           "flex h-16 items-center justify-between gap-4"
         )}
       >
-        <a
-          href="#home"
-          className="shrink-0 font-mono text-lg font-semibold tracking-tight"
-        >
-          <span className="text-primary">&lt;</span>
-          <AnimatedShinyText
-            shimmerWidth={80}
-            className="mx-0 max-w-none text-foreground"
-          >
-            {site.name}
-          </AnimatedShinyText>
-          <span className="text-primary">/&gt;</span>
+        <a href="#home" className="shrink-0 text-lg">
+          <SiteMonogram
+            name={site.name}
+            shinyName={
+              <AnimatedShinyText
+                shimmerWidth={80}
+                className="mx-0 max-w-none text-foreground"
+              >
+                {site.name}
+              </AnimatedShinyText>
+            }
+          />
         </a>
 
         <div className="hidden flex-1 items-center justify-center lg:flex">
@@ -75,26 +75,12 @@ export function Navbar() {
 
         <div className="hidden items-center gap-2 lg:flex">
           <LanguageToggle />
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={toggle}
-            aria-label={ui.toggleTheme}
-          >
-            {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
-          </Button>
+          <ThemeToggle />
         </div>
 
         <div className="flex items-center gap-2 lg:hidden">
           <LanguageToggle />
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={toggle}
-            aria-label={ui.toggleTheme}
-          >
-            {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
-          </Button>
+          <ThemeToggle />
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger
               render={
@@ -105,10 +91,8 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[min(100vw-2rem,20rem)]">
               <SheetHeader>
-                <SheetTitle className="font-mono text-left">
-                  <span className="text-primary">&lt;</span>
-                  {site.name}
-                  <span className="text-primary">/&gt;</span>
+                <SheetTitle className="text-left">
+                  <SiteMonogram name={site.name} />
                 </SheetTitle>
               </SheetHeader>
               <nav className="mt-6 flex flex-col gap-1">
@@ -130,3 +114,4 @@ export function Navbar() {
     </header>
   )
 }
+

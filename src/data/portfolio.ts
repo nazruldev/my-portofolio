@@ -1,8 +1,4 @@
-/**
- * Data portfolio — konten bilingual di `src/i18n/translations/`.
- * Gunakan `usePortfolio()` di komponen untuk konten sesuai bahasa aktif.
- */
-
+/** Types portfolio — hooks & provider di `@/i18n` */
 export type {
   CertificateItem,
   EducationItem,
@@ -16,6 +12,3 @@ export type {
   SkillGroupId,
   SkillItem,
 } from "@/data/portfolio.types"
-
-export { techMarquee } from "@/data/portfolio.shared"
-export { useLocale, usePortfolio, LocaleProvider } from "@/i18n/locale-provider"

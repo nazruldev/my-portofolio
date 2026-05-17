@@ -1,5 +1,5 @@
+import { siteBase } from "@/data/site"
 import { publicAssets } from "@/lib/public-assets"
-import { siteBase } from "@/data/portfolio.shared"
 
 /** Production origin — update if domain changes */
 export const SITE_ORIGIN = siteBase.portfolioUrl.replace(/\/$/, "")
@@ -13,14 +13,7 @@ export const SEO_DEFAULTS = {
   ogImageWidth: 1200,
   ogImageHeight: 1200,
   twitterHandle: undefined as string | undefined,
-  sameAs: [
-    siteBase.social.github,
-    siteBase.social.linkedin,
-    siteBase.social.whatsapp,
-    siteBase.social.telegram,
-    siteBase.social.discord,
-    siteBase.social.facebook,
-  ],
+  sameAs: Object.values(siteBase.social),
   knowsAbout: [
     "Full Stack Web Development",
     "React",
