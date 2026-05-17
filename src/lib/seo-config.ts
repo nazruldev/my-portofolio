@@ -8,7 +8,7 @@ export const SEO_DEFAULTS = {
   siteName: siteBase.name,
   author: siteBase.fullName,
   email: siteBase.email,
-  localeDefault: "id" as const,
+  localeDefault: "en" as const,
   ogImage: `${SITE_ORIGIN}${publicAssets.profile}`,
   ogImageWidth: 1200,
   ogImageHeight: 1200,

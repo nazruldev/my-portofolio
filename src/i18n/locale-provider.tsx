@@ -2,14 +2,19 @@ import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
   useState,
   type ReactNode,
 } from "react"
 import type { Locale, PortfolioContent } from "@/data/portfolio.types"
 import { buildPortfolio } from "@/i18n/merge-portfolio"
-
-const STORAGE_KEY = "locale"
+import {
+  detectLocaleFromGeo,
+  hasUserLocalePreference,
+  persistUserLocale,
+  resolveInitialLocale,
+} from "@/lib/detect-locale"
 
 type LocaleContextValue = {
   locale: Locale
@@ -20,18 +25,26 @@ type LocaleContextValue = {
 
 const LocaleContext = createContext<LocaleContextValue | null>(null)
 
-function readStoredLocale(): Locale {
-  const stored = localStorage.getItem(STORAGE_KEY)
-  if (stored === "id" || stored === "en") return stored
-  return navigator.language.toLowerCase().startsWith("id") ? "id" : "en"
-}
-
 export function LocaleProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>(() => readStoredLocale())
+  const [locale, setLocaleState] = useState<Locale>(resolveInitialLocale)
+
+  useEffect(() => {
+    if (hasUserLocalePreference()) return
+
+    let cancelled = false
+    detectLocaleFromGeo().then((geoLocale) => {
+      if (cancelled || !geoLocale) return
+      setLocaleState(geoLocale)
+    })
+
+    return () => {
+      cancelled = true
+    }
+  }, [])
 
   const setLocale = useCallback((next: Locale) => {
     setLocaleState(next)
-    localStorage.setItem(STORAGE_KEY, next)
+    persistUserLocale(next)
   }, [])
 
   const toggleLocale = useCallback(() => {
