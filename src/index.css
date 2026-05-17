@@ -1,0 +1,166 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Fira Code", ui-monospace, monospace;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --animate-shiny-text: shiny-text 8s infinite;
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  @keyframes shiny-text {
+  0%, 90%, 100% {
+    background-position: calc(-100% - var(--shiny-width)) 0;
+    }
+  30%, 60% {
+    background-position: calc(100% + var(--shiny-width)) 0;
+    }
+  }
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+    }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+    }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: #f4fbf7;
+  --foreground: #0f1f1a;
+  --card: #ffffff;
+  --card-foreground: #0f1f1a;
+  --popover: #ffffff;
+  --popover-foreground: #0f1f1a;
+  --primary: #059669;
+  --primary-foreground: #ffffff;
+  --secondary: #14b8a6;
+  --secondary-foreground: #ffffff;
+  --muted: #ecfdf5;
+  --muted-foreground: #5f6f68;
+  --accent: #2dd4bf;
+  --accent-foreground: #0f1f1a;
+  --destructive: #ef4444;
+  --border: #d4ebe0;
+  --input: #d4ebe0;
+  --ring: #059669;
+}
+
+.dark {
+  --background: #0a120f;
+  --foreground: #ecfdf5;
+  --card: #111a16;
+  --card-foreground: #ecfdf5;
+  --popover: #111a16;
+  --popover-foreground: #ecfdf5;
+  --primary: #34d399;
+  --primary-foreground: #052e1f;
+  --secondary: #2dd4bf;
+  --secondary-foreground: #042f2e;
+  --muted: #1a2621;
+  --muted-foreground: #94a89e;
+  --accent: #5eead4;
+  --accent-foreground: #042f2e;
+  --destructive: #ef4444;
+  --border: #1f2e28;
+  --input: #1f2e28;
+  --ring: #34d399;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4.5rem;
+  }
+  body {
+    @apply min-h-screen bg-background font-sans text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  .hero-mesh {
+    background:
+      radial-gradient(ellipse 80% 50% at 100% 0%, color-mix(in oklab, var(--primary) 12%, transparent), transparent),
+      radial-gradient(ellipse 60% 40% at 0% 100%, color-mix(in oklab, var(--secondary) 8%, transparent), transparent);
+  }
+
+  .reveal {
+    @apply translate-y-6 opacity-0 transition-[opacity,transform] duration-500 ease-out;
+  }
+  .reveal.visible {
+    @apply translate-y-0 opacity-100;
+  }
+
+  .hero-profile-fade-in {
+    animation: hero-profile-fade-in 0.6s ease-out both;
+  }
+
+  @keyframes hero-profile-fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-marquee,
+  .animate-marquee-vertical,
+  .animate-shiny-text,
+  .animate-spin,
+  .animate-pulse,
+  .hero-profile-fade-in {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+
+  .reveal,
+  .transition-\[opacity\,transform\] {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
