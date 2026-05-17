@@ -41,6 +41,8 @@ export const en: PortfolioTranslations = {
     openMenu: "Open menu",
     toggleLanguage: "Switch language",
     certificateBadgeFallback: "Badge",
+    viewCertificate: "View certificate",
+    viewCertificateHint: "Click to enlarge",
   },
   navLinks: [
     { href: "#home", label: "Home" },
@@ -150,6 +152,11 @@ export const en: PortfolioTranslations = {
   },
   certificatesIntro: { sectionLabel: "04. Certificates", title: "Certifications" },
   certificates: {
+    "djp-nestjs-guest-speaker": {
+      issuer: "Directorate General of Taxes (DJP) · PSIAP Team",
+      description:
+        "Guest speaker at the Examination Worksheet Workspace workshop on examination systems based on NestJS microservice architecture, held in Jakarta, 8–24 November 2024.",
+    },
     "ibm-rpa-basic": {
       issuer: "Issued by IBM",
       description:

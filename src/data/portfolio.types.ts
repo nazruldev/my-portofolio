@@ -105,6 +105,8 @@ export type PortfolioContent = {
     openMenu: string
     toggleLanguage: string
     certificateBadgeFallback: string
+    viewCertificate: string
+    viewCertificateHint: string
   }
   navLinks: { href: string; label: string }[]
   aboutIntro: { sectionLabel: string; title: string }

@@ -41,6 +41,8 @@ export const id: PortfolioTranslations = {
     openMenu: "Buka menu",
     toggleLanguage: "Ganti bahasa",
     certificateBadgeFallback: "Badge",
+    viewCertificate: "Lihat sertifikat",
+    viewCertificateHint: "Klik untuk perbesar",
   },
   navLinks: [
     { href: "#home", label: "Beranda" },
@@ -151,6 +153,11 @@ export const id: PortfolioTranslations = {
   },
   certificatesIntro: { sectionLabel: "04. Sertifikat", title: "Sertifikasi" },
   certificates: {
+    "djp-nestjs-guest-speaker": {
+      issuer: "Direktorat Jenderal Pajak (DJP) · Tim PSIAP",
+      description:
+        "Narasumber pada workshop Examination Worksheet Workspace sistem pemeriksaan berbasis arsitektur microservice NestJS, Jakarta, 8–24 November 2024.",
+    },
     "ibm-rpa-basic": {
       issuer: "Diterbitkan oleh IBM",
       description:

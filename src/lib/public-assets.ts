@@ -9,5 +9,6 @@ export const publicAssets = {
   resume: "/resume/resume.pdf",
   certificates: {
     cer1: "/certificates/cer-1.png",
+    djpNestjsGuestSpeaker: "/certificates/djp-nestjs-guest-speaker.png",
   },
 } as const

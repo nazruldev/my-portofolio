@@ -1,4 +1,4 @@
-import { usePortfolio } from "@/i18n"
+﻿import { usePortfolio } from "@/i18n"
 import { CertificateCard } from "@/components/certificates/CertificateCard"
 import { SectionHeading } from "@/components/shared/SectionHeading"
 import { SectionShell } from "@/components/shared/SectionShell"
@@ -21,6 +21,8 @@ export function Certificates() {
             item={item}
             index={i}
             fallbackLabel={ui.certificateBadgeFallback}
+            viewLabel={ui.viewCertificate}
+            viewHint={ui.viewCertificateHint}
           />
         ))}
       </div>
